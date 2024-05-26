@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #161414;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            background-color: #2df1d7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: -38px -26px 2px rgba(139, 138, 138, 0.1);
+            width: 400px;
+        }
+        .calculator input[type="text"] {
+            box-shadow: -16px -11px 9px rgb(151, 149, 149);
+            width: 88%;
+            padding: 15px;
+            margin:1%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.8em;
+            text-align: right;
+        }
+        .calculator button {
+            box-shadow: -16px -11px 9px rgb(143, 141, 141);
+            width: 7%;
+            padding: 25px 36px;
+            margin: 3%;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.8em;
+            cursor: pointer;
+        }
+    
+        .calculator .operator {
+            background-color: #f0ad4e;
+        }
+        .calculator .operator:hover {
+            background-color: #ec971f;
+        }
+        .calculator .equals {
+            padding: 25px;
+            width: 46%;
+            margin-left: 6%;
+            background-color: #d9534f;
+        }
+        .calculator .backspace {
+            text-align: center;
+            color: #1d140b;
+            background-color: #c55946;
+        }
+        .calculator .clear {
+            color: #1d140b;
+            padding: 25px;
+            width: 35%;
+            background-color: #ee5710;
+        }
+        .calculator .equals:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form name="frm">
+            <input type="text" name="n" placeholder="0">
+            <br>
+            <button type="button" onclick="frm.n.value+='1'">1</button> 
+            <button type="button" onclick="frm.n.value+='2'">2</button> 
+            <button type="button" onclick="frm.n.value+='3'">3</button> 
+            <button type="button" class="operator" onclick="frm.n.value+='/'">/</button> 
+
+            <br>
+            <button type="button" onclick="frm.n.value+='4'">4</button> 
+
+            <button type="button" onclick="frm.n.value+='5'">5</button> 
+            <button type="button" onclick="frm.n.value+='6'">6</button> 
+            <button type="button" class="operator" onclick="frm.n.value+='*'">*</button> 
+
+            <br>
+            <button type="button" onclick="frm.n.value+='7'">7</button> 
+            <button type="button" onclick="frm.n.value+='8'">8</button> 
+            <button type="button" onclick="frm.n.value+='9'">9</button> 
+            <button type="button" class="operator" onclick="frm.n.value+='+'">+</button> 
+
+   
+            <br>
+            <button type="button" onclick="frm.n.value+='0'">0</button> 
+            <button type="button" onclick="frm.n.value+='.'">.</button> 
+            <button type="button" class="backspace" onclick="frm.n.value = frm.n.value.slice(0, -1)">X</button>
+            <button type="button" class="operator" onclick="frm.n.value+='-'">-</button> 
+             
+            <br>
+            <button type="button" class="clear" onclick="frm.n.value=''">AC</button>
+            <button type="button" class="equals" onclick="frm.n.value=eval(frm.n.value)">=</button> 
+        </form>
+    </div>
+</body>
+</html>
